@@ -8,6 +8,6 @@ class Solution {
             squareSum+=(digit*digit);
             n/=10;
         }
-        return ((squareSum-digitSum)>=50) ? true : false;
+        return ((squareSum-digitSum)>=50);
     }
 }
