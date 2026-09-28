@@ -1,17 +1,15 @@
 class Solution {
     public int maxDepth(String s) {
-        
-        int depth=0;
         int maxdepth=0;
-
-        for(char ch: s.toCharArray()){
-            if(ch=='('){
-                depth++;
-                maxdepth=Math.max(maxdepth,depth);
+        int depth=0;
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i)=='('){
+                depth+=1;
             }
-            else if(ch==')'){
-                depth--;
+            if(s.charAt(i)==')'){
+                depth-=1;
             }
+            maxdepth=Math.max(maxdepth,depth);
         }
         return maxdepth;
     }
